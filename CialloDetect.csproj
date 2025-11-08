@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<OutputType>Library</OutputType>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<RootNamespace>CialloDetect</RootNamespace>
+		<AssemblyName>CialloDetect</AssemblyName>
+	</PropertyGroup>
+
+	<!-- 添加必要的包引用 -->
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<!-- 添加游戏DLL引用 -->
+	<ItemGroup>
+		<!-- 使用环境变量或直接路径 -->
+		<Reference Include="Z:\game\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\TeamSoda.*" />
+		<Reference Include="Z:\game\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\ItemStatsSystem.dll" />
+		<Reference Include="Z:\game\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\Unity*" />
+		<Compile Remove="CialloDetect\**" />
+		<EmbeddedResource Remove="CialloDetect\**" />
+		<None Remove="CialloDetect\**" />
+		<Compile Remove="CialloDetect - 副本 %282%29.cs" />
+		<Compile Remove="CialloDetect - 副本.cs" />
+		<Compile Remove="ModBehaviour_backup.cs" />
+		<None Remove="Ciallo.jpg" />
+		<None Remove="因幡爱瑠.png" />
+		<None Remove="新建 文本文档.bat" />
+		<Reference Include="Z:\game\Steam\steamapps\common\Escape from Duckov\Duckov_Data\Managed\FMODUnity.dll" />
+	</ItemGroup>
+
+</Project>
